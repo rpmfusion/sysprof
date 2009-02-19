@@ -1,6 +1,6 @@
 Name:           sysprof      
 Version:        1.0.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sysprof is a sampling CPU profiler
 Group:          Development/System
 License:        GPLv2+
@@ -19,7 +19,7 @@ BuildRequires:  libglade2-devel
 BuildRequires:  binutils-devel
 BuildRequires:  desktop-file-utils
 
-ExclusiveArch:  %{ix86} x86_64
+ExclusiveArch:  i386 x86_64
 
 %description
 Sysprof is a sampling CPU profiler for Linux that uses a kernel module
@@ -61,6 +61,9 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_datadir}/applications/*.desktop
 
 %changelog
+* Thu Feb 19 2009 Thorsten Leemhuis <fedora leemhuis info> - 1.0.12-2
+- make it excludearch i386 instead of ix86, as the latter confuses plague
+
 * Wed Feb 11 2009 Gianluca Sforna <giallu gmail com> - 1.0.12-1
 - version update to 1.0.12
 
