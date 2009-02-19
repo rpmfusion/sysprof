@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=0.9.4
+Encoding=UTF-8
+Name=Sysprof
+Comment=a sampling CPU profiler
+Exec=sysprof
+Icon=sysprof-icon.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Development;Profiling;
