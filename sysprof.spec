@@ -1,6 +1,6 @@
 Name:           sysprof      
 Version:        1.0.12
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sysprof is a sampling CPU profiler
 Group:          Development/System
 License:        GPLv2+
@@ -61,6 +61,9 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_datadir}/applications/*.desktop
 
 %changelog
+* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.0.12-3
+- rebuild for new F11 features
+
 * Thu Feb 19 2009 Thorsten Leemhuis <fedora leemhuis info> - 1.0.12-2
 - make it excludearch i386 instead of ix86, as the latter confuses plague
 
