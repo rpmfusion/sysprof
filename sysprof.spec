@@ -1,6 +1,6 @@
 Name:           sysprof      
 Version:        1.0.12
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sysprof is a sampling CPU profiler
 Group:          Development/System
 License:        GPLv2+
@@ -11,8 +11,8 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Source1:        sysprof.desktop
 
 # kmod related stuff
-Provides:       sysprof-kmod-common = %{version}
-Requires:       kmod-%{name} >= %{version}
+Provides:       %{name}-kmod-common = %{version}
+Requires:       %{name}-kmod >= %{version}
 
 BuildRequires:  gtk2-devel => 2.6
 BuildRequires:  libglade2-devel
@@ -61,6 +61,10 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_datadir}/applications/*.desktop
 
 %changelog
+* Thu Apr  2 2009 Gianluca Sforna <giallu gmail com> - 1.0.12-3
+- Fix kmod requires and provides according to 
+  http://rpmfusion.org/Packaging/KernelModules/Kmods2
+
 * Thu Feb 19 2009 Thorsten Leemhuis <fedora leemhuis info> - 1.0.12-2
 - make it excludearch i386 instead of ix86, as the latter confuses plague
 
