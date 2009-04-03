@@ -1,6 +1,6 @@
 Name:           sysprof      
 Version:        1.0.12
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Sysprof is a sampling CPU profiler
 Group:          Development/System
 License:        GPLv2+
@@ -19,7 +19,7 @@ BuildRequires:  libglade2-devel
 BuildRequires:  binutils-devel
 BuildRequires:  desktop-file-utils
 
-ExclusiveArch:  i386 x86_64
+ExclusiveArch:  i586 x86_64
 
 %description
 Sysprof is a sampling CPU profiler for Linux that uses a kernel module
@@ -61,6 +61,9 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_datadir}/applications/*.desktop
 
 %changelog
+* Fri Apr 03 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.0.12-5
+- s/i386/i586/ in ExclusiveArch for F11
+
 * Thu Apr  2 2009 Gianluca Sforna <giallu gmail com> - 1.0.12-4
 - Fix kmod requires and provides according to 
   http://rpmfusion.org/Packaging/KernelModules/Kmods2
